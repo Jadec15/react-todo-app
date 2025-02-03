@@ -71,10 +71,11 @@ function App() {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        placeholder="Enter a task..."
+        placeholder="Enter your task here"
       />
 
       {/* Category Dropdown */}
+      <p className="field-label">Category</p>
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="Personal">Personal</option>
         <option value="Work">Work</option>
@@ -82,11 +83,12 @@ function App() {
       </select>
 
       {/* Due Date Input */}
+      <p className="field-label">Due Date</p>
       <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
 
       <button onClick={addTask}>Add Task</button>
 
-      <h2>Active Tasks</h2>
+      <h2 className="active-tasks-title">Active Tasks</h2>
       <ul>
         {tasks.map((t, index) => (
           <li key={index}>
@@ -109,7 +111,7 @@ function App() {
 
       {/* Completed Tasks Dropdown */}
       <button onClick={() => setShowCompleted(!showCompleted)}>
-        {showCompleted ? "Hide Completed Tasks ⬆️" : "Show Completed Tasks ⬇️"}
+        {showCompleted ? "Hide Completed Tasks ⬆" : "Show Completed Tasks ⬇"}
       </button>
 
       {showCompleted && (

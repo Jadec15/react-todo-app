@@ -34,6 +34,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.field-label{
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
+}
 
 input, select {
   width: 100%;
@@ -45,7 +50,7 @@ input, select {
 
 
 button {
-  background-color: #007bff;
+  background-color: #2b946c;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -58,6 +63,10 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.active-tasks-title {
+  margin: 25px 0px;
 }
 
 /* Task List */
